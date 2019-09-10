@@ -1,0 +1,551 @@
+<DOCTYPE! html>
+<html>
+<style>
+/** global element styling **/
+
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #e6ffe6;
+  font-family: 'Lato', sans-serif;
+}
+
+#page-wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+
+/** global classes styling **/
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.select {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 80px;
+  width: 96px;
+  border: 0px solid;
+}
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #006600;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  width: 60vw;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-height:150px;
+  max-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+
+nav {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+}
+
+#hero input[type="name"] {
+  max-width: 275px;
+  width: 100%;
+}
+
+#hero input[type="email"] {
+  max-width: 275px;
+  width: 100%;
+}
+
+#hero input[type="submit"] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color: #f1c40f;
+}
+
+#hero input[type="submit"]:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 120px;
+  }
+}
+
+#ourMission {
+  margin-top: 30px;
+}
+
+#ourMission .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: darkorange;
+}
+
+@media (max-width: 100px) {
+  #ourMission .icon {
+    display: none;
+  }
+}
+
+#ourMission .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80px;
+  width: 120vw;
+  padding: -200px;
+}
+
+@media (max-width: 550px) {
+  #ourMission .desc {
+    width: 100%;
+    text-align: center;
+    padding: -100px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  #ourMission {
+    margin-top: 0;
+  }
+}
+
+#features {
+  margin-top: 30px;
+}
+
+#features .icon {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: darkorange;
+}
+
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 120px;
+}
+
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0px;
+  }
+}
+
+#video {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#video > iframe {
+  max-width: 800px;
+  width: 100%;
+}
+
+#fullStackDevelopper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100%  / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.product > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #f1c40f;
+  font-weight: 400;
+}
+
+.product > button:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+@media (max-width: 800px) {
+  #fullStackDevelopper {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
+</style>
+<head>
+  <div id="page-wrapper">
+    <header
+id="header">
+<div class="logo">
+  <img id="header-img"
+src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png"
+alt="freeCodeCamp logo" /> </div>
+
+    <nav id="nav-bar">
+      <ul>
+        <li><a  href="#ourMission">Our mission</a></li>
+        <li><a  href="#features">Features</a></li>
+        <li><a  href="#video">YouTube channel</a></li>
+        <li><a  href="#fullStackDevelopper">Full-Stack certification</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<div class="container"></div>
+
+  <section id="hero">
+    <h2>Coding for everyone</h2>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input
+             name="name"
+             id="name"
+             type="text"
+             placeholder="Enter your name"
+             required
+             />
+      <br/>
+      <input
+        name="email"
+        id="email"
+        type="email"
+        placeholder="Enter your email address"
+        required
+      />
+      <input id="submit" type="submit" value="Sign Up" class="btn" />
+    </form>
+  </section>
+    <section id="ourMission">
+      <div class="container">
+        <div class="grid">
+        <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+        <div class="desc">
+          <h2>Our mission</h2>
+          <p>
+         Is to help everyone to learn how to code. If your goal is to improve your skills, changing career or only improve yourself having fun on the way we are your best partner.
+            </p>
+        </div>
+      </div>
+      <section id="features">
+        <div class="grid">
+          <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+          <div class="desc">
+            <h2>Totally free</h2>
+            <p>
+            We are a tiny non-profit that's helping millions of people learn to code for free, come on join the community and encourage others to do the same
+          </p>
+          </div>
+          </div>
+      <div class="grid">
+        <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+        <div class="desc">
+          <h2>Curriculum</h2>
+          <p>
+            We got six main courses, to transform you into a complete developer, you can earn a certification after completing the five projects in the end of each course.Make use of our forum to discuss doubts with the other campers. Our news section is fulfill with articles and ideas for projects.
+         </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon"><i class="fa fa-3x fa-battery-full" aria-hidden="true"></i></div>
+        <div class="desc">
+          <h2>And we got more...</h2>
+          <p>
+           Starting with our Youtube channel with tons of great tutorials about virtually everything to transform you in a super developer.
+            Don't forget also our podcast, where you can listen to stories about perseverance and tips.
+            And at least but not the last, our freeCodeCamp Radio, to help you relaxing while you are studing our coding.
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section id="video">
+      <iframe
+        id="video"
+        height="315"
+        src="https://www.youtube.com/watch?v=ZihKWQXRBmE">
+        </iframe>
+    </section>
+    <section id="fullStackDevelopper">
+      <div class="product" id="tenor">
+        <div class="level">Responsive Web Design Certification</div>
+        <h2>300hrs</h2>
+        <ol>
+          <li>Basic HTML and HTML5</li>
+          <li>Basics CSS</li>
+          <li>Applied Visual Design</li>
+          <li>Applied Acessibility</li>
+          <li>Responsive Web Design Principles</li>
+          <li>CSS Flexbox</li>
+          <li>CSS Grid</li>
+          <li>Responsive Web Design Projects</li>
+        </ol>
+        <button class="select"><a href="https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5">Select</a></button>
+      </div>
+      <div class="product" id="bass">
+        <div class="level">Javascript Algorithms and Data Structures Certification</div>
+        <h2>300hrs</h2>
+        <ol>
+          <li>Basic Javascript</li>
+          <li>ES6</li>
+          <li>Regular Expressions</li>
+          <li>Debugging</li>
+          <li>Basic Data Structures</li>
+          <li>Basic Algorithm Scripting</li>
+          <li>Objetc Oriented Programming</li>
+          <li>Functional Programming</li>
+          <li>Intermediate Algorithm Scripting</li>
+          <li>Javascript Algorithms and Data Structures Projects</li>
+        </ol>
+        <button class="select"><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript">Select</a></button>
+      </div>
+      <div class="product" id="valve">
+        <div class="level">Front End Libraries Certification</div>
+        <h2>300hrs</h2>
+        <ol>
+          <li>Boostrap</li>
+          <li>jQuery</li>
+          <li>Sass</li>
+          <li>React</li>
+          <li>Redux</li>
+          <li>React and Redux</li>
+          <li>Front End Libraries Projects</li>
+        </ol>
+        <button class="select"><a href="https://learn.freecodecamp.org/front-end-libraries/bootstrap">Select</a></button>
+      </div>
+      <div class="product" id="tenor">
+        <div class="level">Data Visualization Certification</div>
+        <h2>300hrs</h2>
+        <ol>
+          <li>Data Visualization with D3</li>
+          <li>JSON APIs and Ajax</li>
+          <li>Data Visualization Projects/li>
+        </ol>
+        <button class="select"><a href="https://learn.freecodecamp.org/data-visualization/data-visualization-with-d3">Select</a></button>
+      </div>
+      <div class="product" id="tenor">
+        <div class="level">APIs and Microservices Certification</div>
+        <h2>300hrs</h2>
+        <ol>
+          <li>Managing Packages with Npm</li>
+          <li>Basic Node and Express</li>
+          <li>MongoDB and Mongoose</li>
+          <li>APIs and Microservices Projects</li>
+        </ol>
+        <button class="select"><a href="https://learn.freecodecamp.org/apis-and-microservices/managing-packages-with-npm">Select</a></button>
+      </div>
+      <div class="product" id="tenor">
+        <div class="level">Information Security and Quality Assurance Certification</div>
+        <h2>300hrs</h2>
+        <ol>
+          <li>Information Security with HelmetJS</li>
+          <li>Quality Assurance and testing with Chai</li>
+          <li>Advanced Node and Express</li>
+          <li>Information Security and Quality Assurance Projects</li>
+        </ol>
+        <button class="select"><a href="https://learn.freecodecamp.org/information-security-and-quality-assurance/information-security-with-helmetjs">Select</a></button>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span>Copyright 2019, freeCodeCamp</span>
+    </footer>
+  </div>
+</div>
+</head>
