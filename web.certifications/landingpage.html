@@ -31,6 +31,9 @@ li {
 
 
 /** global classes styling **/
+h1, h2, p{
+  text-align: center;
+}
 
 .container {
   max-width: 1000px;
@@ -51,7 +54,7 @@ li {
 }
 
 .select {
-  background-color: #59ace0;
+  background-color: #006600;
   border-radius: 4px;
   color: white;
   font-size: 1em;
@@ -60,12 +63,14 @@ li {
   border: 0px solid;
 }
 
+
 .grid {
   display: flex;
+  text-align: center;
 }
 
 header {
-  position: fixed;
+  position:  relative;
   top: 0;
   min-height: 75px;
   padding: 0px 20px;
@@ -143,48 +148,117 @@ nav > ul {
   }
 }
 
-#hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 200px;
-  margin-top: 50px;
-}
-
-#hero input[type="name"] {
-  max-width: 275px;
+/* Full-width input fields */
+input[type=text] {
   width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
 }
 
-#hero input[type="email"] {
-  max-width: 275px;
+/* Add a background color when the inputs get focus */
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #006600;
+  color: white;
+  padding: 15px 30px;
+  margin: 80px 600px;
+  border: none;
+  cursor: pointer;
   width: 100%;
+  opacity: 0.9;
 }
 
-#hero input[type="submit"] {
-  max-width: 150px;
-  width: 100%;
-  height: 30px;
-  margin: 15px 0;
-  border: 0;
-  background-color: #f1c40f;
+button:hover {
+  opacity:1;
 }
 
-#hero input[type="submit"]:hover {
-  background-color: orange;
-  transition: background-color 1s;
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
 }
 
-@media (max-width: 650px) {
-  #hero {
-    margin-top: 120px;
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: none;
+  width: 10%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
   }
 }
 
+
 #ourMission {
-  margin-top: 30px;
+  margin-top: 10px;
+
 }
 
 #ourMission .icon {
@@ -247,7 +321,7 @@ nav > ul {
 
 #features .desc {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   height: 125px;
   width: 80vw;
@@ -276,13 +350,25 @@ nav > ul {
 }
 
 #video > iframe {
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
 }
 
-#fullStackDevelopper {
+.courses > h2{
+  padding-top: 50px;
+  text-align:center;
+}
+
+#htmlCssJs {
   margin-top: 60px;
-  display: flex;
+  display: inline-grid;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#dataApisSecurity {
+  margin-top: 160px;
+  display: grid;
   flex-direction: row;
   justify-content: center;
 }
@@ -294,12 +380,12 @@ nav > ul {
   text-align: center;
   width: calc(100%  / 3);
   margin: 10px;
-  border: 1px solid #000;
+  border: 1px solid #006600;
   border-radius: 3px;
 }
 
 .product > .level {
-  background-color: #ddd;
+  background-color: #c2f0c2;
   color: black;
   padding: 15px 0;
   width: 100%;
@@ -307,33 +393,30 @@ nav > ul {
   font-weight: 700;
 }
 
-.product > h2 {
-  margin-top: 15px;
-}
 
 .product > ol {
-  margin: 15px 0;
+  margin: auto;
 }
 
 .product > ol > li {
-  padding: 5px 0;
+  padding: 5px;
 }
 
 .product > button {
   border: 0;
-  margin: 15px 0;
-  background-color: #f1c40f;
+  bottom: 20px;
+  background-color: #006600;
   font-weight: 400;
 }
 
 .product > button:hover {
-  background-color: orange;
+  background-color: #1aff1a;
   transition: background-color 1s;
 }
 
 @media (max-width: 800px) {
-  #fullStackDevelopper {
-    flex-direction: column;
+  #htmlCssJs, #dataApisSecurity {
+    flex-direction: row;
   }
   .product {
     max-width: 300px;
@@ -366,8 +449,7 @@ footer > span {
   color: #444;
 }
 </style>
-<head>
-  <div id="page-wrapper">
+<div id="page-wrapper">
     <header
 id="header">
 <div class="logo">
@@ -377,42 +459,61 @@ alt="freeCodeCamp logo" /> </div>
 
     <nav id="nav-bar">
       <ul>
-        <li><a  href="#ourMission">Our mission</a></li>
         <li><a  href="#features">Features</a></li>
         <li><a  href="#video">YouTube channel</a></li>
         <li><a  href="#fullStackDevelopper">Full-Stack certification</a></li>
       </ul>
     </nav>
-  </header>
+    </header>
 
-<div class="container"></div>
+    <body>
 
-  <section id="hero">
-    <h2>Coding for everyone</h2>
-    <form id="form" action="https://www.freecodecamp.com/email-submit">
-      <input
-             name="name"
-             id="name"
-             type="text"
-             placeholder="Enter your name"
-             required
-             />
-      <br/>
-      <input
-        name="email"
-        id="email"
-        type="email"
-        placeholder="Enter your email address"
-        required
-      />
-      <input id="submit" type="submit" value="Sign Up" class="btn" />
-    </form>
-  </section>
-    <section id="ourMission">
-      <div class="container">
-        <div class="grid">
+    <div class="container"></div>
+
+    <section id="form">
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="name" required>
+
+      <label for="psw"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+      <section id="ourMission">
         <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
-        <div class="desc">
           <h2>Our mission</h2>
           <p>
          Is to help everyone to learn how to code. If your goal is to improve your skills, changing career or only improve yourself having fun on the way we are your best partner.
@@ -452,16 +553,15 @@ alt="freeCodeCamp logo" /> </div>
     </div>
     </section>
     <section id="video">
-      <iframe
-        id="video"
-        height="315"
-        src="https://www.youtube.com/watch?v=ZihKWQXRBmE">
-        </iframe>
+      <iframe id="video" width="560" height="315"
+      src="https://www.youtube.com/embed/mU6anWqZJcc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
     </section>
-    <section id="fullStackDevelopper">
-      <div class="product" id="tenor">
+    <div class="courses">
+    <h2>300 hours Each</h2></div>
+    <section id="htmlCssJs">
+      <div class="product" id="course">
         <div class="level">Responsive Web Design Certification</div>
-        <h2>300hrs</h2>
         <ol>
           <li>Basic HTML and HTML5</li>
           <li>Basics CSS</li>
@@ -474,9 +574,8 @@ alt="freeCodeCamp logo" /> </div>
         </ol>
         <button class="select"><a href="https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5">Select</a></button>
       </div>
-      <div class="product" id="bass">
+      <div class="product" id="course">
         <div class="level">Javascript Algorithms and Data Structures Certification</div>
-        <h2>300hrs</h2>
         <ol>
           <li>Basic Javascript</li>
           <li>ES6</li>
@@ -491,9 +590,8 @@ alt="freeCodeCamp logo" /> </div>
         </ol>
         <button class="select"><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript">Select</a></button>
       </div>
-      <div class="product" id="valve">
+      <div class="product" id="course">
         <div class="level">Front End Libraries Certification</div>
-        <h2>300hrs</h2>
         <ol>
           <li>Boostrap</li>
           <li>jQuery</li>
@@ -505,9 +603,12 @@ alt="freeCodeCamp logo" /> </div>
         </ol>
         <button class="select"><a href="https://learn.freecodecamp.org/front-end-libraries/bootstrap">Select</a></button>
       </div>
-      <div class="product" id="tenor">
+    </section>
+    <br>
+    <div></div>
+    <section class="dataApisSecurity">
+      <div class="product" id="course">
         <div class="level">Data Visualization Certification</div>
-        <h2>300hrs</h2>
         <ol>
           <li>Data Visualization with D3</li>
           <li>JSON APIs and Ajax</li>
@@ -515,9 +616,8 @@ alt="freeCodeCamp logo" /> </div>
         </ol>
         <button class="select"><a href="https://learn.freecodecamp.org/data-visualization/data-visualization-with-d3">Select</a></button>
       </div>
-      <div class="product" id="tenor">
+      <div class="product" id="course">
         <div class="level">APIs and Microservices Certification</div>
-        <h2>300hrs</h2>
         <ol>
           <li>Managing Packages with Npm</li>
           <li>Basic Node and Express</li>
@@ -526,9 +626,8 @@ alt="freeCodeCamp logo" /> </div>
         </ol>
         <button class="select"><a href="https://learn.freecodecamp.org/apis-and-microservices/managing-packages-with-npm">Select</a></button>
       </div>
-      <div class="product" id="tenor">
+      <div class="product" id="course">
         <div class="level">Information Security and Quality Assurance Certification</div>
-        <h2>300hrs</h2>
         <ol>
           <li>Information Security with HelmetJS</li>
           <li>Quality Assurance and testing with Chai</li>
@@ -538,6 +637,7 @@ alt="freeCodeCamp logo" /> </div>
         <button class="select"><a href="https://learn.freecodecamp.org/information-security-and-quality-assurance/information-security-with-helmetjs">Select</a></button>
       </div>
     </section>
+  </body>
     <footer>
       <ul>
         <li><a href="#">Privacy</a></li>
