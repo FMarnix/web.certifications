@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page FCC</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div id="page-wraper">
+<header id=header>
+  <div class="logo">
+       <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png" alt="freeCodeCamp"/></div>
+  <nav id="nav-bar">
+    <ul>
+      <li><a class="nav-link" href="#ourMission">Our Mission</a></li>
+      <li><a class="nav-link" href="#formation">Formation</a></li>
+      <li><a class="nav-link" href="#success stories">Success Stories</a></li>
+      <li><a class="nav-link" href="#pricing">Pricing</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <section id="signup">
+     <form id="form" action="https://www.freecodecamp.com/email-submit">
+    <button class="formbutton"onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+    <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="name"><b>Name</b></label>
+      <input id="name"type="text" placeholder="Enter Name" name="name" required>
+
+      <label for="email"><b>Email</b></label>
+      <input id="email"type="email" placeholder="Enter Email" name="email" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <input id="submit"type="submit"value="Sign up"class="signupbtn">
+      </div>
+    </div>
+  </form>
+</div>
+       <section id="ourMission">
+        <div class="grid"><i class="fa fa-3x fa-fire"></i></div>
+          <h2>Our mission...</h2>
+          <p>
+         Is to help everyone to learn how to code. If your goal is to improve your skills, changing career or only improve yourself having fun on the way we are your best partner.
+            </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+        <div class="desc">
+          <h2>Curriculum</h2>
+          <p>
+            We got six main courses, to transform you into a complete developer, you can earn a certification after completing the five projects in the end of each course.Make use of our forum to discuss doubts with the other campers. Our news section is fulfill with articles and ideas for projects.
+         </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon"><i class="fa fa-3x fa-battery-full" aria-hidden="true"></i></div>
+        <div class="desc">
+          <h2>And we got more...</h2>
+          <p>
+           Starting with our Youtube channel with tons of great tutorials about virtually everything to transform you in a super developer.
+            Don't forget also our podcast, where you can listen to stories about perseverance and tips.
+            And at least but not the last, our <a id="podcast" href="https://coderadio.freecodecamp.org/">freeCodeCamp Radio</a>, to help you relaxing while you are studing our coding.
+          </p>
+        </div>
+      </div>
+    </div>
+  <iframe id="video" width="560" height="315"
+      src="https://www.youtube.com/embed/mU6anWqZJcc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </section>
+<section id="formation">
+  <h2>Formation Offer</h2>
+  <div class="courses">
+    <h4>300 hours Each</h4></div>
+      <div class="product" id="course">
+        <div class="level">Responsive Web Design Certification</div>
+        <ol>
+          <li>Basic HTML and HTML5</li>
+          <li>Basics CSS</li>
+          <li>Applied Visual Design</li>
+          <li>Applied Acessibility</li>
+          <li>Responsive Web Design Principles</li>
+          <li>CSS Flexbox</li>
+          <li>CSS Grid</li>
+          <li>Responsive Web Design Projects</li>
+        </ol>
+        <button class="select"><a class="nav-link"href="https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5">Select</a></button>
+      </div>
+      <div class="product" id="course">
+        <div class="level">Javascript Algorithms and Data Structures Certification</div>
+        <ol>
+          <li>Basic Javascript</li>
+          <li>ES6</li>
+          <li>Regular Expressions</li>
+          <li>Debugging</li>
+          <li>Basic Data Structures</li>
+          <li>Basic Algorithm Scripting</li>
+          <li>Objetc Oriented Programming</li>
+          <li>Functional Programming</li>
+          <li>Intermediate Algorithm Scripting</li>
+          <li>Javascript Algorithms and Data Structures Projects</li>
+        </ol>
+        <button class="select"><a class="nav-link"href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript">Select</a></button>
+      </div>
+      <div class="product" id="course">
+        <div class="level">Front End Libraries Certification</div>
+        <ol>
+          <li>Boostrap</li>
+          <li>jQuery</li>
+          <li>Sass</li>
+          <li>React</li>
+          <li>Redux</li>
+          <li>React and Redux</li>
+          <li>Front End Libraries Projects</li>
+        </ol>
+        <button class="select"><a class="nav-link"href="https://learn.freecodecamp.org/front-end-libraries/bootstrap">Select</a></button>
+      </div>
+    </section>
+    <br>
+    <div></div>
+    <section class="dataApisSecurity">
+      <div class="product" id="course">
+        <div class="level">Data Visualization Certification</div>
+        <ol>
+          <li>Data Visualization with D3</li>
+          <li>JSON APIs and Ajax</li>
+          <li>Data Visualization Projects/li>
+        </ol>
+        <button class="select"><a class="nav-link"href="https://learn.freecodecamp.org/data-visualization/data-visualization-with-d3">Select</a></button>
+      </div>
+      <div class="product" id="course">
+        <div class="level">APIs and Microservices Certification</div>
+        <ol>
+          <li>Managing Packages with Npm</li>
+          <li>Basic Node and Express</li>
+          <li>MongoDB and Mongoose</li>
+          <li>APIs and Microservices Projects</li>
+        </ol>
+        <button class="select"><a class="nav-link"href="https://learn.freecodecamp.org/apis-and-microservices/managing-packages-with-npm">Select</a></button>
+      </div>
+      <div class="product" id="course">
+        <div class="level">Information Security and Quality Assurance Certification</div>
+        <ol>
+          <li>Information Security with HelmetJS</li>
+          <li>Quality Assurance and testing with Chai</li>
+          <li>Advanced Node and Express</li>
+          <li>Information Security and Quality Assurance Projects</li>
+        </ol>
+        <button class="select"><a class="nav-link"href="https://learn.freecodecamp.org/information-security-and-quality-assurance/information-security-with-helmetjs">Select</a></button>
+      </div>
+    </section>
+</section>
+<section id="success stories">
+  <h2>Success Stories</h2>
+  <p>
+    You can hear our podcast every monday <a id="podcast"href="https://podcast.freecodecamp.org/">here</a>. It's a friendly conversation with people that learn to code and where they tell their experiences, and the pros and cons that everyone face to learn to code but also the gratification that is learning to code and the new possibilities that are open to everyone.
+</section>
+<section id="pricing">
+        <div class="grid">
+          <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+          <div class="desc">
+            <h2>Totally free</h2>
+            <p>
+            We are a tiny non-profit that's helping millions of people learn to code for free, come on join the community and encourage others to do the same.If you want you can donate 5$ every month to help us improve everyday freeCodeCamp.
+          </p>
+          </div>
+          </div>
+  <footer>
+      <ul>
+        <li><a class="nav-link"href="#">Privacy</a></li>
+        <li><a class="nav-link"href="#">Terms</a></li>
+        <li><a class="nav-link"href="#">Contact</a></li>
+      </ul>
+      <span>Copyright 2019, freeCodeCamp</span>
+    </footer>
+  </div>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
