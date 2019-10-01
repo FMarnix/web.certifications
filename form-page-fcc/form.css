@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+html,
+body {
+  background-color: #ffff;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  min-width: 320px;
+}
+.head {
+  text-align: center;
+   background-color:#006600;
+   color:#ffff;
+}
+h2{
+  text-align:center;
+}
+.personal {
+  display:inline-block;
+  text-align:left;
+  width:40%;
+  padding:5px;
+  vertical-align:top;
+  margin-top:10px;
+  margin-left:200px;
+}
+.informations {
+  display:inline-block;
+  text-align:center;
+  width:40%;
+  vertical-align:top;
+  margin-top:20px;
+  margin-left:170px;
+}
+body{
+  min-width: 300px;
+  background:#ccffcc;
+}
+.rightTab {
+  display:inline-block;
+  text-align:center;
+  width:48%;
+  vertical-align:left;
+}
+.checkTab{
+  display:inline-block;
+  text-align:left;
+  width:48%;
+  vertical-align:left;
+}
+.input-field{
+  height:20px;
+  width:280px;
+  padding:5px;
+  margin:10px;
+}
+.motivation{
+  display:inline-block;
+  text-align:center;
+  width:40%;
+  vertical-align:top;
+  margin-top:20px;
+  margin-left:217px;
+}
+.radio {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+.checkbox {
+  position: relative;
+  left: 0px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+userRating,
+input[type="checkbox"] {
+  float:left;
+  margin-right: 10px;
+}
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-left:100px;
+}
+.dropdown {
+  height: 35px;
+  width: 160px;
+  padding: 5px;
+  margin: 10px;
+  margin-top: 15px;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+}
+.preferences{
+   display:inline-block;
+  text-align:center;
+  width:40%;
+  vertical-align:top;
+  margin-top:20px;
+  margin-left:185px;
+}
+#submit {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin-left: 0px;
+  border: 0px solid;
+}
+#submit:hover{
+  background:#0F5897;
+     border: 1p solid #0F5897;
+     cursor:pointer;
+}
+.rating{
+  display:inline-block;
+  text-align:center;
+  width:40%;
+  vertical-align:top;
+  margin-top:20px;
+  margin-left:0px;
+}
+.checkbox {
+  position: relative;
+  left: 0px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
