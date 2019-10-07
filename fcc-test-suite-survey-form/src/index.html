@@ -1,0 +1,121 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<html>
+   <div class="head">
+  <head>
+    <h1 id="title">Campers Survey</h1>
+    <p id="description">
+    We want your help to improve  freeCodeCamp
+      </p>
+    </head>
+   </div>
+  <body>
+    <h2>Personal Questions</h2>
+    <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+      <div class="rowTab">
+        <div class ="personal">
+          <label id="name-label" for="name"><b>* Name:</b></label>
+          </div>
+      </div>
+        <div class="rightTab">
+          <input autofocus type="text" type="text" name="name" id="name" class="input-field" placeholder=" Enter your name" required>
+          </div>
+      <div class="rowTab">
+        <div class="personal">
+          <label id="email-label" for="email"><b>* Email:</b></label>
+          </div>
+        <div class="rightTab">
+          <input type="email" name="email" id="email" class="input-field" placeholder="Enter your email" required>
+          </div>
+        </div>
+      <div class="rowTab">
+        <div class="personal">
+          <label id="number-label" for="age"><b>* Age:</b></label>
+          </div>
+        <div class="rightTab">
+          <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+          </div>
+        </div>
+      <h4>What is your current profissional status?</h4>
+        <div class="informations">
+          <select id="dropdown" name="status" class="dropdown">
+            <option disabled selected value>Choose an option</option>
+            <option value="student">Student</option>
+            <option value="employedOtherArea">Working in other area</option>
+            <option value="professional">Working in the area</option>
+            <option value="freelancer">Freelancer</option>
+          <option value="unemployed">Unemployed</option>
+          <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+      <h4>Why do you use freeCodeCamp?</h4>
+        <div class="motivation">
+          <select id="dropdown" name="option" class="dropdown">
+            <option disabled selected value>Choose an option</option>
+            <option value="curiosity">Curiosity</option>
+            <option value="learnToCode">Learn to code</option>
+            <option value="excelence">Improve knoweledge</option>
+            <option value="career">Changing career</option>
+            <option value="notToSay">Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+      <h2>Opinion</h2>
+      <h4>*Are you satisfied with the use of freeCodeCamp?</h4>
+      <div class="opinion">
+          <ul style="list-style:none;">
+            <li class="radio">Very satisfied<input name="radio-buttons" value="1" type="radio" class="userRating" checked></></li>
+            <li class="radio">Things can be improved<input name="radio-buttons" value="2" type="radio" class="userRating" checked></li>
+            <li class="radio">Don't have an opinion<input name="radio-buttons" value="3" type="radio" class="userRating" checked></li>
+            </ul>
+        </>
+        </div>
+      <h4>What  do you like most in freeCodeCamp?</h4>
+      <div class="opinion">
+          <select id="dropdown" name="option" class="dropdown">
+            <option disabled selected value>Choose an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+        <option value="openSource">Open Source</option>
+            </select>
+        </div>
+      <h4>Things that should be improved in the future</h4>
+      <h5>(Check all that apply):</h5>
+      <div class="rowTab">
+        <div class="checkTab">
+          <div class="labels">
+          <ul id="preferences" style="list-style: none;">
+            <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRating">Front-end Projects</label></li>
+            <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRating">Back-end Projects</li>
+            <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRating">Data Visualization</label></li>
+            <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRating">Challenges</label></li>
+            <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRating">Open Source Community</label></li>
+            <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRating">Gitter help rooms</label></li>
+            <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Videos</label></li>
+            <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRating">City Meetups</label></li>
+            <li class="checkbox"><label><input name="prefer" value="9" type="checkbox" class="userRating">Wiki</label></li>
+            <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRating">Forum</label></li>
+            <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRating">Additional Courses</label></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  <h4> Comments or Suggestions?</h4>
+        <div class="comments-field">
+          <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+          </div>
+      <button id="submit" type="submit">Submit</button>
+      </form>
+    </body>
+</html>
