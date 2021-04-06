@@ -1,0 +1,42 @@
+<style media="screen">
+  .title{
+  text-align: center;
+}
+h1{
+  text-align: center;
+  font-family:sans-serif;
+}
+h2 {
+  text-align: center;
+}
+img {
+  max-width:80%;
+  display:block;
+  margin:auto;
+}
+#img-caption {
+  text-align: center;
+}
+body {
+  background-color:#FBF8EF;
+}
+h3{
+  text-align: center;
+}
+#headline{
+  text-align: center;
+}
+p{
+  font-family:helvetica,arial,sans-serif;
+  font-size:17px;
+}
+li{
+  font-family:helvetic,arial,sans-serif;
+  font-size:17px;
+}
+blockquote{
+  font-family:sans-serif;
+  font-style:italic;
+  font-size:17px;
+}
+</style>
